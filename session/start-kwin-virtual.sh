@@ -6,7 +6,8 @@
 # audit's clients are allowed (KWIN_SCREENSHOT_NO_PERMISSION_CHECKS=1, KWIN_WAYLAND_NO_PERMISSION_CHECKS=1).
 # Writes $XDG_RUNTIME_DIR/audit-env, the exports every other script of the kit needs; source it.
 #   KWIN_WAYLAND   the kwin_wayland binary (default: kwin_wayland on PATH), or
-#   KWIN_ROOT      a root file system to run KWin from, under bubblewrap (the Sparky Stereo OS bench root)
+#   KWIN_ROOT      a root file system to run KWin from, under bubblewrap (the Sparky Stereo OS bench root);
+#                  KWIN_PLUGIN_OVERRIDE=FILE then puts that displayxr.so over the root's (a fix under test)
 #   KWIN_GPU       a render node for KWin (/dev/dri/renderD128), or none (default: Mesa's software renderer)
 #   KWIN_ENV       extra VAR=VALUE words for KWin (DISPLAYXR_DEBUG=1 QT_LOGGING_RULES=kwin_displayxr.debug=true)
 #   KWIN_ARGS      extra arguments for kwin_wayland
